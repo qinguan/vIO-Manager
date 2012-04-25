@@ -1,0 +1,47 @@
+<domain type='kvm'>
+	<name>vt_d_debian</name>
+	<description>just test using sriov!</description>
+	<os>
+		<type>hvm</type>
+		<boot dev='hd'/>
+	</os>
+
+	<memory>524288</memory>
+	<currentMemory>524288</currentMemory>
+	<on_poweroff>destroy</on_poweroff>
+	<on_reboot>restart</on_reboot>
+	<on_crash>restart</on_crash>
+	
+	<features><pae/><acpi/><apic/></features>
+	<clock offset='utc'/>
+	<devices>
+		<input type='mouse' bus='usb'/>		
+		<disk type='file' device='disk'>
+			<source file='/home/qinguan/exp/kvm_sriov/debian_dev.img'/>
+		
+			<!-->  use virtio or /'ide' in ide io </!-->
+			<target dev='hda' bus='virtio'/>
+		</disk>
+		
+		<emulator>/usr/bin/kvm</emulator>
+		<graphics type='vnc' port='-1' listen='0.0.0.0'/>
+
+		<!-->
+			VT-d or sr-iov assign a pci device just use the hostdev element!
+			When managed is "yes" for a PCI device, 
+			it is detached from the host before being passed on to the guest.
+		</!-->
+		<hostdev mode='subsystem' type='pci' managed='yes'>
+			<source>
+				<address bus='0x2' slot='0x0' function='0x1'/>
+			</source>
+		</hostdev>
+		<!-->
+		Direct attachment to physical interface.requires the Linux macvtap driver.
+		<interface type='direct'>
+			<source dev='eth0' mode='vepa'>
+		</interface>
+		</!-->
+		
+	</devices>
+</domain>

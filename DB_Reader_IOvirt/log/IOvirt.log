@@ -1,0 +1,4216 @@
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+no available PF can be assigned .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:01:00.0 assign to the domid:9 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+no available PF can be assigned .
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+no available PF can be assigned .
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+the nic bsf:01:00.0 assign to the domid:9 successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+the nic bsf:02:10.5 assign to the domid:12 successfully .
+rmmod igb successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+the nic bsf:02:10.5 assign to the domid:12 successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+the nic bsf:02:10.5 assign to the domid:12 successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+the nic bsf:02:10.5 assign to the domid:12 successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+2 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:1 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:2 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the VM:3 using virtio start successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+the VM:4 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:2 successfully .
+the VM:3 using virtio has been destroyed successfully .
+the nic bsf:01:00.0 rerclaim from domid:1 successfully .
+the VM:4 using virtio has been destroyed successfully .
+the VM:5 using virtio start successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+virsh destroy xu_test1 failed .
+virsh destroy xu_test2 failed .
+virsh destroy xu_test3 failed .
+virsh destroy xu_test4 failed .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:01:00.0 assign to the domid:6 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:7 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.3 assign to the domid:8 successfully .
+the nic bsf:02:10.5 assign to the domid:9 successfully .
+virsh reboot xu_test2 failed .
+the VM:5 using virtio has been destroyed successfully .
+the nic bsf:01:00.0 rerclaim from domid:6 successfully .
+the nic bsf:02:10.1 rerclaim from domid:7 successfully .
+the nic bsf:02:10.3 rerclaim from domid:8 successfully .
+the nic bsf:02:10.5 rerclaim from domid:9 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+virsh destroy xu_test1 failed .
+virsh destroy xu_test2 failed .
+virsh destroy xu_test3 failed .
+virsh destroy xu_test4 failed .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:02:10.1 assign to the domid:10 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.3 assign to the domid:11 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:12 using virtio start successfully .
+the VM:13 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:02:10.1 rerclaim from domid:10 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.3 rerclaim from domid:11 successfully .
+virsh destroy xu_test3 successfully .
+the VM:12 using virtio has been destroyed successfully .
+virsh destroy xu_test4 successfully .
+the VM:13 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 2782
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+echo sudo ifconfig eth0 192.168.1.111 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+sudo ifconfig eth0 192.168.1.111 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:14 successfully .
+the nic bsf:01:00.0 rerclaim from domid:14 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+2 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is running background now.
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:1 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:2 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the VM:3 using virtio start successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:4 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:1 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:2 successfully .
+virsh destroy xu_test3 successfully .
+the VM:3 using virtio has been destroyed successfully .
+virsh destroy xu_test4 successfully .
+the VM:4 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+modify Image failed .
+res : 0
+start vm xu_test1 failed .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.1 assign to the domid:5 successfully .
+the nic bsf:02:10.1 rerclaim from domid:5 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:6 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:7 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+the VM:8 using virtio start successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:9 using virtio start successfully .
+the nic bsf:01:00.0 rerclaim from domid:6 successfully .
+the nic bsf:02:10.1 rerclaim from domid:7 successfully .
+the VM:8 using virtio has been destroyed successfully .
+the VM:9 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:10 successfully .
+the nic bsf:02:10.1 assign to the domid:11 successfully .
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.3 assign to the domid:12 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.5 assign to the domid:13 successfully .
+the nic bsf:01:00.0 rerclaim from domid:10 successfully .
+the nic bsf:02:10.1 rerclaim from domid:11 successfully .
+the nic bsf:02:10.3 rerclaim from domid:12 successfully .
+the nic bsf:02:10.5 rerclaim from domid:13 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:02:10.1 assign to the domid:14 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.3 assign to the domid:15 successfully .
+the VM:16 using virtio start successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:17 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:14 successfully .
+the nic bsf:02:10.3 rerclaim from domid:15 successfully .
+the VM:16 using virtio has been destroyed successfully .
+the VM:17 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:18 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:19 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:20 using virtio start successfully .
+the VM:21 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:18 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:19 successfully .
+virsh destroy xu_test3 successfully .
+the VM:20 using virtio has been destroyed successfully .
+virsh destroy xu_test4 successfully .
+the VM:21 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:22 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:23 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:24 using virtio start successfully .
+the VM:25 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:22 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:23 successfully .
+virsh destroy xu_test3 successfully .
+the VM:24 using virtio has been destroyed successfully .
+virsh destroy xu_test4 successfully .
+the VM:25 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:01:00.0 assign to the domid:26 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.1 assign to the domid:27 successfully .
+the VM:28 using virtio start successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:29 using virtio start successfully .
+the VM:29 using virtio has been destroyed successfully .
+virsh destroy xu_test3 successfully .
+the VM:28 using virtio has been destroyed successfully .
+the nic bsf:02:10.1 rerclaim from domid:27 successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:26 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+echo sudo ifconfig eth0 10.100.0.19 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+sudo ifconfig eth0 10.100.0.19 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:30 successfully .
+virsh destroy ok successfully .
+the nic bsf:01:00.0 rerclaim from domid:30 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+echo sudo ifconfig eth0 10.100.0.99 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+sudo ifconfig eth0 10.100.0.99 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:31 successfully .
+virsh destroy ok successfully .
+the nic bsf:01:00.0 rerclaim from domid:31 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:32 successfully .
+the nic bsf:02:10.3 assign to the domid:33 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:34 using virtio start successfully .
+the VM:35 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:32 successfully .
+the nic bsf:02:10.3 rerclaim from domid:33 successfully .
+the VM:34 using virtio has been destroyed successfully .
+the VM:35 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:36 successfully .
+the nic bsf:02:10.1 assign to the domid:37 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.3 assign to the domid:38 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.5 assign to the domid:39 successfully .
+getVMuuidBsf failed .
+getVMuuidBsf failed .
+the nic bsf:01:00.0 rerclaim from domid:36 successfully .
+the nic bsf:02:10.1 rerclaim from domid:37 successfully .
+the nic bsf:02:10.3 rerclaim from domid:38 successfully .
+the nic bsf:02:10.5 rerclaim from domid:39 successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:40 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+modify Image failed .
+res : 0
+start vm xu_test2 failed .
+modify Image failed .
+res : 0
+start vm xu_test3 failed .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+modify Image failed .
+res : 0
+start vm xu_test4 failed .
+the nic bsf:01:00.0 rerclaim from domid:40 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE 
+echo sudo ifconfig eth0 10.100.0.19 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE 
+sudo ifconfig eth0 10.100.0.19 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:41 successfully .
+virsh destroy test successfully .
+the nic bsf:01:00.0 rerclaim from domid:41 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.1 assign to the domid:42 successfully .
+the nic bsf:02:10.3 assign to the domid:43 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the VM:44 using virtio start successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:45 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:42 successfully .
+the nic bsf:02:10.3 rerclaim from domid:43 successfully .
+the VM:44 using virtio has been destroyed successfully .
+the VM:45 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:01:00.0 assign to the domid:46 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.1 assign to the domid:47 successfully .
+the nic bsf:02:10.3 assign to the domid:48 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.5 assign to the domid:49 successfully .
+getVMuuidBsf failed .
+getVMuuidBsf failed .
+the nic bsf:01:00.0 rerclaim from domid:46 successfully .
+the nic bsf:02:10.1 rerclaim from domid:47 successfully .
+the nic bsf:02:10.3 rerclaim from domid:48 successfully .
+the nic bsf:02:10.5 rerclaim from domid:49 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+echo sudo ifconfig eth0 10.100.0.19 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF 
+sudo ifconfig eth0 10.100.0.19 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:50 successfully .
+virsh destroy test successfully .
+the nic bsf:01:00.0 rerclaim from domid:50 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+echo sudo ifconfig eth0 10.100.0.88 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+sudo ifconfig eth0 10.100.0.88 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:01:00.0 assign to the domid:51 successfully .
+virsh destroy test successfully .
+the nic bsf:01:00.0 rerclaim from domid:51 successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:02:10.1 assign to the domid:52 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.3 assign to the domid:53 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:54 using virtio start successfully .
+the VM:55 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:52 successfully .
+the nic bsf:02:10.3 rerclaim from domid:53 successfully .
+the VM:54 using virtio has been destroyed successfully .
+the VM:55 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:56 successfully .
+the nic bsf:02:10.1 assign to the domid:57 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.3 assign to the domid:58 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.5 assign to the domid:59 successfully .
+the nic bsf:01:00.0 rerclaim from domid:56 successfully .
+the nic bsf:02:10.1 rerclaim from domid:57 successfully .
+the nic bsf:02:10.3 rerclaim from domid:58 successfully .
+the nic bsf:02:10.5 rerclaim from domid:59 successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:60 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:61 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:62 using virtio start successfully .
+the VM:63 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:60 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:61 successfully .
+virsh destroy xu_test3 successfully .
+the VM:62 using virtio has been destroyed successfully .
+virsh suspend xu_test4successfully .
+virsh destroy xu_test4 successfully .
+the VM:63 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee 
+echo sudo ifconfig eth0 10.100.0.88 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee 
+sudo ifconfig eth0 10.100.0.88 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:64 using virtio start successfully .
+virsh suspend testsuccessfully .
+virsh destroy test successfully .
+the VM:64 using virtio has been destroyed successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.1 assign to the domid:65 successfully .
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.3 assign to the domid:66 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:67 using virtio start successfully .
+the VM:68 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:65 successfully .
+the nic bsf:02:10.3 rerclaim from domid:66 successfully .
+the VM:67 using virtio has been destroyed successfully .
+the VM:68 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:69 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:70 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.3 assign to the domid:71 successfully .
+the nic bsf:02:10.5 assign to the domid:72 successfully .
+getVMuuidBsf failed .
+the nic bsf:01:00.0 rerclaim from domid:69 successfully .
+the nic bsf:02:10.1 rerclaim from domid:70 successfully .
+the nic bsf:02:10.3 rerclaim from domid:71 successfully .
+the nic bsf:02:10.5 rerclaim from domid:72 successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:73 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:74 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:75 using virtio start successfully .
+the VM:76 using virtio start successfully .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:73 successfully .
+virsh destroy xu_test2 successfully .
+getVMuuidBsf failed .
+the nic bsf:02:10.1 rerclaim from domid:74 successfully .
+the VM:75 using virtio has been destroyed successfully .
+the VM:76 using virtio has been destroyed successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+echo sudo ifconfig eth0 10.100.0.99 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+sudo ifconfig eth0 10.100.0.99 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:77 using virtio start successfully .
+virsh suspend testsuccessfully .
+virsh destroy test successfully .
+the VM:77 using virtio has been destroyed successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:02:10.1 assign to the domid:78 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.3 assign to the domid:79 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:80 using virtio start successfully .
+the VM:81 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:78 successfully .
+the nic bsf:02:10.3 rerclaim from domid:79 successfully .
+the VM:80 using virtio has been destroyed successfully .
+the VM:81 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+the nic bsf:01:00.0 assign to the domid:82 successfully .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:83 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.3 assign to the domid:84 successfully .
+the nic bsf:02:10.5 assign to the domid:85 successfully .
+virsh destroy test1 failed .
+virsh destroy xu_test1 successfully .
+the nic bsf:01:00.0 rerclaim from domid:82 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:83 successfully .
+virsh destroy xu_test3 successfully .
+the nic bsf:02:10.3 rerclaim from domid:84 successfully .
+virsh destroy xu_test4 successfully .
+the nic bsf:02:10.5 rerclaim from domid:85 successfully .
+the machine supports VT-d .
+3 Ethernet totally in this machine .
+6 82576 nic totally in this machine .
+insert the nic 00:19.0 successfully .
+insert the nic 01:00.0 successfully .
+insert the nic 01:00.1 successfully .
+00:19.0
+bc:30:5b:b6:86:1d
+insert the bsf:00:19.0 corresponding mac address:bc:30:5b:b6:86:1d successfully .
+01:00.0
+00:1b:21:36:54:7a
+insert the bsf:01:00.0 corresponding mac address:00:1b:21:36:54:7a successfully .
+01:00.1
+00:1b:21:36:54:7b
+insert the bsf:01:00.1 corresponding mac address:00:1b:21:36:54:7b successfully .
+rmmod igb successfully .
+modprobe igb max_vfs=0,4 successfully .
+VF created by 82576 Nic .
+/sbin/ifconfig eth0 up .
+/sbin/ifconfig eth1 up .
+/sbin/ifconfig eth2 up .
+set 01:00.0 used to 1
+set 01:00.1 used to 1
+set 01:00.0 used to 0
+insert the nic 02:10.1 successfully .
+insert the nic 02:10.3 successfully .
+insert the nic 02:10.5 successfully .
+insert the nic 02:10.7 successfully .
+VF: 02:10.1 belongs to the PF: 01:00.1
+VF: 02:10.3 belongs to the PF: 01:00.1
+VF: 02:10.5 belongs to the PF: 01:00.1
+VF: 02:10.7 belongs to the PF: 01:00.1
+monitor is already running background .
+the pid is 3228
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+echo sudo ifconfig eth0 10.100.0.19 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff 
+sudo ifconfig eth0 10.100.0.19 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:86 using virtio start successfully .
+virsh suspend testsuccessfully .
+virsh destroy test successfully .
+the VM:86 using virtio has been destroyed successfully .
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.62 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.62 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+the nic bsf:02:10.1 assign to the domid:87 successfully .
+the nic bsf:02:10.3 assign to the domid:88 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:89 using virtio start successfully .
+the VM:90 using virtio start successfully .
+the nic bsf:02:10.1 rerclaim from domid:87 successfully .
+the nic bsf:02:10.3 rerclaim from domid:88 successfully .
+the VM:89 using virtio has been destroyed successfully .
+the VM:90 using virtio has been destroyed successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.51 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.51 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.61 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.61 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.3 used to 1 .
+assign a VF to the Virtual Machine ...
+the nic bsf:01:00.0 assign to the domid:91 successfully .
+the nic bsf:02:10.1 assign to the domid:92 successfully .
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.71 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.71 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.5 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+the nic bsf:02:10.3 assign to the domid:93 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.72 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.72 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the nic bsf:02:10.5 assign to the domid:94 successfully .
+the nic bsf:01:00.0 rerclaim from domid:91 successfully .
+the nic bsf:02:10.1 rerclaim from domid:92 successfully .
+the nic bsf:02:10.3 rerclaim from domid:93 successfully .
+the nic bsf:02:10.5 rerclaim from domid:94 successfully .
+set 01:00.0 used to 1 .
+assign a PF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_1.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+echo sudo ifconfig eth0 10.100.0.31 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether a7:cc:55:44:55:88 
+sudo ifconfig eth0 10.100.0.31 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+set 02:10.1 used to 1 .
+assign a VF to the Virtual Machine ...
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_2.img successfully .
+the nic bsf:01:00.0 assign to the domid:95 successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.41 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether b7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.41 
+sudo ifconfig eth0 up
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_3.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.52 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether c7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.52 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+the nic bsf:02:10.1 assign to the domid:96 successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+rmmod nbd successfully .
+modprobe nbd max_part=4 successfully .
+kvm-nbd --connect=/dev/nbd4 /home/qinguan/exp/kvm_img/ubuntu_4.img successfully .
+mount /dev/nbd4p1 /mnt successfully .
+mv /mnt/etc/init.d/rc.local /mnt/etc/init.d/rc.local.blk successfully .
+touch /mnt/etc/init.d/rc.local successfully .
+echo sudo ifconfig eth0 down
+echo sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+echo sudo ifconfig eth0 10.100.0.53 
+echo sudo ifconfig eth0 up
+add ip and mac address to the image successfully .
+        ;;
+    *)
+        echo "Usage: $0 start|stop" >&2
+        exit 3
+        ;;
+esac
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether d7:22:aa:44:55:66 
+sudo ifconfig eth0 10.100.0.53 
+sudo ifconfig eth0 up
+rm /mnt/etc/udev/rules.d/70-persistent-net.rules successfully .
+umount /mnt succesfully .
+kvm-nbd --disconnect /dev/nbd4 successfully .
+res : 1
+the VM:97 using virtio start successfully .
+the VM:98 using virtio start successfully .
+the VM:98 using virtio has been destroyed successfully .
+virsh destroy xu_test3 successfully .
+the VM:97 using virtio has been destroyed successfully .
+the nic bsf:01:00.0 rerclaim from domid:95 successfully .
+virsh destroy xu_test2 successfully .
+the nic bsf:02:10.1 rerclaim from domid:96 successfully .
+failed to update the virtual_machine_instance_id
+failed to update the virtual_machine using virtio

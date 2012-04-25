@@ -1,0 +1,146 @@
+*****************************************************************************
+apt-get install vim
+新立德 安装linux-source-2.6.32
+#tar jxvf linux-source-2.6.32.tar.bz2
+#apt-get install libncurses5-dev
+#cd /usr/src/linux-2.6.32
+
+# make menuconfig
+    
+    set "Bus options (PCI etc.)" -> "Support for DMA Remapping Devices" to "*"
+    set "Bus options (PCI etc.)" -> "Enable DMA Remapping Devices" to "*"
+    set "Bus options (PCI etc.)" -> "PCI Stub driver" to "M" #版本不同，可能需要改成*
+    optional setting: 
+
+       set "Bus options (PCI etc.)" -> "Support for Interrupt Remapping" to "*"
+
+    exit/save 
+#make
+#make modules_install
+#make install
+#update-initramfs –c –k 2.6.32
+#update-grub
+#apt-get install vim
+#vim /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on pci=assign-busses"#pci=assign-busses该参数是VF生成的必要条件
+#update-grub
+
+#apt-get install kvm
+#kvm --version
+QEMU PC emulator version 0.12.5 (qemu-kvm-0.12.5), Copyright (c) 2003-2008 Fabrice Bellard
+
+#****验证VT-d*******#
+#!/bin/bash
+modprobe pci_stub
+echo "8086 10de" > /sys/bus/pci/drivers/pci-stub/new_id
+echo 0000:00:19.0 > /sys/bus/pci/devices/0000:00:19.0/driver/unbind
+echo 0000:00:19.0 > /sys/bus/pci/drivers/pci-stub/bind
+modprobe kvm
+modprobe kvm-intel
+sudo kvm -m 512 -boot c -net none -hda ubuntu_disk.img  -device pci-assign,host=00:19.0
+进入虚拟机后，查看相关信息
+#ifconfig -a
+#lspci | grep Eth
+#****验证VT-d*******#
+
+
+#****验证VF生成*******#
+#lspci | grep Eth
+#rmmod igb
+#modprobe igb max_vfs=1 #系统自带驱动只支持一个参数，但每一端口均能生成VF
+#lspci | grep Eth #此时可以看到多了VF
+上intel下载igb最新的驱动，本实验采用了igb-2.4.13
+#cd igb-2.4.13/src
+#make 
+#make install
+#lspci | grep Eth
+#rmmod igb
+#modprobe igb max_vfs=1,3 #新驱动支持对每一个端口设定不同的VF数目
+#****验证VF生成*******#
+
+#****验证SR-IOV*******#
+#vim /etc/modprobe.d/blacklist.conf
+末尾添加 blacklist igbvf
+
+#apt-get install libxml++2.6-dev
+#apt-get install libgnutls-dev
+#apt-get install libdevmapper-dev libdevmapper
+#apt-get install libhal-dev
+#apt-get install libudev-dev
+#apt-get install libpciaccess-dev
+#apt-get install libnl-dev
+#apt-get install libpolkit-agent-1-0 libpolkit-backend-1-0 libpolkit-gobject-1-0 libpolkit-gtk-1-0 #Maybe
+下载最新的libvirt，本实验采用libvirt-0.9.0
+#tar zxvf libvirt-0.9.0
+#cd libvirt-0.9.0
+#./configure --prefix=/usr --libdir=/usr/lib64 --localstatedir=/var --sysconfdir=/etc --with-hal=yes --with-udev=yes --with-polkit=yes
+#libvirtd --version
+libvirtd (libvirt) 0.9.0
+
+#virsh
+错误：unable to connect to '/var/run/libvirt/libvirt-sock', libvirtd may need to be started: 没有那文件或目录
+错误：连接到管理程序失败
+#/usr/sbin/libvirtd -d
+#reboot
+
+#apt-get install virt-viewer
+#rmmod igb
+#modprobe igb max_vfs=1,1
+#ifc0nfig eth2 up
+#virsh create vm.xml
+#virt-viewer -c qemu:///system vm #vm为虚拟机名称
+进入虚拟机查看
+#lspci | grep Eth
+配置IP，尝试ping其它机器，通则成功。
+若虚拟机没有加载igbvf
+在虚拟机安装igbvf后，重启虚拟机
+#****验证SR-IOV*******#
+
+#apt-get install virt-manager
+#apt-get install apache2
+#apt-get install ruby
+#apt-get install rails
+#apt-get install mysql-server-5.1  mysql-server
+#apt-get install libmysql-ruby
+
+vm.xml:
+<domain type='kvm'>
+	<name>xgj_test</name>
+	<description>xgj_test</description>
+	<os>
+		<type>hvm</type>
+		<boot dev='hd'/>
+	</os>
+	<memory>524288</memory>
+	<currentMemory>524288</currentMemory>
+	
+	<on_poweroff>destroy</on_poweroff>
+	<on_reboot>restart</on_reboot>
+	<on_crash>destroy</on_crash>
+	<features><pae/><acpi/><apic/></features>
+	<clock offset='utc'/>
+	<devices>
+		<input type='mouse' bus='usb'/>
+		<disk type='file' device='disk'>
+			<source file='/media/F68437318436F3A9/test_img/ubuntu_1.img'/>
+			<target dev='vda' bus='virtio'/>
+		</disk>
+		<emulator>/usr/bin/kvm</emulator>
+		<graphics type='vnc'  port='-1'  listen='0.0.0.0'  />
+		
+		<hostdev mode='subsystem' type='pci' managed='yes' >
+			<source>
+				<address bus = '0x02' slot = '0x10' function = '0x1' />
+			</source>
+		</hostdev>
+	</devices>
+</domain>
+
+***********系统运行环境******************************
+需安装python-sqlalchemy、python-mysqldb
+正常运行rails工程还需安装以下两个包，可能需要安装第3个包libapache2-mod-fcgid、libfcgi-ruby1.8
+libapache2-mod-fcgid                 1:2.2-1+lenny1             an alternative module compat with mod_fastcg
+libfcgi-ruby1.8                      0.8.7-4.1                  FastCGI library for Ruby
+libfcgi0ldbl                         2.4.0-7                    Shared library of FastCGI
+
+
