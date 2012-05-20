@@ -6,6 +6,6 @@ In order to improve the overall performance of virtualized system, many manufact
 
 This project implemented a network I/O virtual management system based on mltiple network I/O virtual solutions under Debian sequeeze. The project integrates three I/O Virtualization Technologies, Virtio, VT-d and SR-IOV. It can detect the system hardware configuration information automatically, such as Network Card attributes(single port/double port/four port, whether support VT-d or not, how many virtual ports can be generated, etc.), and than select the best solution for the current system. The project generates a virtual machine's descriptor(in XML file) and use KVM to boot the virtual machine from the descriptor with system image created for virtualization. Besides, the project can demonstrate the statue of virtual/physics network cards generated and distribution immediately on web page built with Ruby On Rails and Flex. 
 
-The project is developed under the debian sequeeze, using Python,Ruby,Flex,Sqlalchemy， supporting three network I/O virtualization technologies, Virtio as default, VT-d and SRIOV.
+The project is developed under the debian sequeeze, using Python,Ruby,Flex,Sqlalchemy, supporting three network I/O virtualization technologies, Virtio as default, VT-d and SRIOV.
 
 A System demo can be found here: http://v.youku.com/v_show/id_XMzk2NzYwMTUy.html.
